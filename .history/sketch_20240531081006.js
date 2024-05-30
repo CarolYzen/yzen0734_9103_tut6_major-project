@@ -61,7 +61,7 @@ function draw() {
   originalImage();
   pop();
 
-  if (centralCircleRadius > 100 || centralCircleRadius < 30) {
+  if (centralCircleRadius > 100 || centralCircleRadius < 50) {
     growthFactor *= -1;
   }
   centralCircleRadius += growthFactor;

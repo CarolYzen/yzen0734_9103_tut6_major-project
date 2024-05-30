@@ -61,7 +61,7 @@ function draw() {
   originalImage();
   pop();
 
-  if (centralCircleRadius > 100 || centralCircleRadius < 30) {
+  if (centralCircleRadius > 100 || centralCircleRadius < 70) {
     growthFactor *= -1;
   }
   centralCircleRadius += growthFactor;
@@ -118,6 +118,7 @@ function originalImage() {
     ellipse(x, y, circle.r, circle.r);
   }
 
+  // Draw patterns with circular motion
   for (let i = 0; i < patterns.length; i++) {
     let pattern = patterns[i];
     let angleOffset = i * TWO_PI / patterns.length;
@@ -143,6 +144,7 @@ function originalImage() {
   }
 }
 
+// Fit canvas and pattern to window size
 function windowResized() {
   size = Math.min(windowWidth, windowHeight);
   scaleFactor = Math.min(windowWidth, windowHeight) / 1024;
